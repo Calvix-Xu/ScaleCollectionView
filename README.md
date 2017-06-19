@@ -4,7 +4,10 @@
 ![](https://github.com/Calvix-Xu/ScaleCollectionView/blob/master/ScaleCollectionView/gif/2.gif?raw=true) <br/>
  <br/>
 ##平台要求<br/>
-ios >= 8.0
+ios版本 >= 8.0
 
 ##安装方法 CocoaPods    <br/> 
 `pod 'ScaleCollectionView', '~> 1.0.5'`
+
+##开源协议<br/>
+MIT
