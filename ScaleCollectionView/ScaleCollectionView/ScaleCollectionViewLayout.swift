@@ -10,10 +10,10 @@ import UIKit
 
 public class ScaleCollectionViewLayout: UICollectionViewLayout {
     
-    var itemHeight: CGFloat = 420.0      // item高度
-    var itemCoverPercent: CGFloat = 0.8  //下一个item覆盖前一个item的百分比
-    var itemCount: Int  = 0              //item数量
-    var firstItemscaleWidth: CGFloat = 80  //第一个item缩进的宽度，设置了第一个，其他的item根据第一个来缩放
+    public var itemHeight: CGFloat = 420.0      // item高度
+    public var itemCoverPercent: CGFloat = 0.8  //下一个item覆盖前一个item的百分比
+    public var itemCount: Int  = 0              //item数量
+    public var firstItemscaleWidth: CGFloat = 80  //第一个item缩进的宽度，设置了第一个，其他的item根据第一个来缩放
     
     override public var collectionViewContentSize: CGSize{
         let width = CGFloat(self.collectionView?.frame.size.width ?? 0)
