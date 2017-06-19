@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "ScaleCollectionView"
-  s.version      = "1.0.4"
+  s.version      = "1.0.5"
   s.summary      = "一个上下拖拉缩放的collectionView."
 
   # This description is used to generate tags and improve search results.
