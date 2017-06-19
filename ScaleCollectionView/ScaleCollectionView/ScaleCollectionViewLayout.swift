@@ -8,14 +8,14 @@
 
 import UIKit
 
-public class ScaleCollectionViewLayout: UICollectionViewLayout {
+open class ScaleCollectionViewLayout: UICollectionViewLayout {
     
     public var itemHeight: CGFloat = 420.0      // item高度
     public var itemCoverPercent: CGFloat = 0.8  //下一个item覆盖前一个item的百分比
     public var itemCount: Int  = 0              //item数量
     public var firstItemscaleWidth: CGFloat = 80  //第一个item缩进的宽度，设置了第一个，其他的item根据第一个来缩放
     
-    override public var collectionViewContentSize: CGSize{
+    override open var collectionViewContentSize: CGSize{
         let width = CGFloat(self.collectionView?.frame.size.width ?? 0)
         var height = CGFloat(itemHeight) + CGFloat(itemCount-1)*CGFloat(itemHeight)*CGFloat(1-itemCoverPercent)
         if height <= self.collectionView!.frame.size.height {
@@ -25,7 +25,7 @@ public class ScaleCollectionViewLayout: UICollectionViewLayout {
     }
     
   
-    override public func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
+    override open func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
 
         let indexs = visiableIndexPathsIn(rect)
         let maxVisibleY = self.collectionView!.contentOffset.y + self.collectionView!.frame.size.height
@@ -66,7 +66,7 @@ public class ScaleCollectionViewLayout: UICollectionViewLayout {
     }
     
     //TODO:todo
-    override public func layoutAttributesForItem(at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
+    override open func layoutAttributesForItem(at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
         
         let attribute = UICollectionViewLayoutAttributes(forCellWith: indexPath)
         let width: CGFloat = self.collectionView?.frame.width ?? 0
@@ -90,7 +90,7 @@ public class ScaleCollectionViewLayout: UICollectionViewLayout {
         return array
     }
     
-    override public func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
+    override open func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
         return true
     }
 }

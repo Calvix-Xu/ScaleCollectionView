@@ -8,10 +8,10 @@
 
 import UIKit
 
-public class ScaleCollectionViewCell: UICollectionViewCell {
+open class ScaleCollectionViewCell: UICollectionViewCell {
     
     //防止后一个cell不会被前一个cell遮挡
-    override public func apply(_ layoutAttributes: UICollectionViewLayoutAttributes) {
+    override open func apply(_ layoutAttributes: UICollectionViewLayoutAttributes) {
         superview?.bringSubview(toFront: self)
         super.apply(layoutAttributes)
     }
